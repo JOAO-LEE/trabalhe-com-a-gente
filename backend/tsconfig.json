@@ -37,7 +37,7 @@
     "skipLibCheck": true,
     "emitDeclarationOnly": true,
     "noEmit": true,
-    "allowImportingTsExtensions": true
+    "allowImportingTsExtensions": true,
   },
   "include": [
     "src"
