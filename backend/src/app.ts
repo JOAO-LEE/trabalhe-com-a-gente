@@ -5,8 +5,12 @@ const app: Application = express();
 
 app.use(express.json());
 
-app.get("/", (req: Request, res: Response) => {
-    res.status(200).send("Application running on port 3000")
+app.get("/", async (req: Request, res: Response) => {
+    const { searchQuery } = req.query;
+    const githubApiUrl = `https://api.github.com/search/repositories?q=${searchQuery}`
+    const response = await fetch(githubApiUrl)
+    const result = await response.json()
+    res.status(200).json(result)
 });
 
 export default app;
