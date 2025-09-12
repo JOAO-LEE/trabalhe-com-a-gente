@@ -1,8 +1,16 @@
+<header-search (submitted)="onSearch($event)"></header-search>
 <main class="main">
+
     <section>
+        @if(githubService.error().message && hasSearched()) {
+        <p class="error-message"><i class="ph-bold ph-warning-circle"></i> {{githubService.error().message}}</p>
+        }
         <ul class="repo-list">
-            <repo-card></repo-card>
+            @for (repository of githubService.repositories().items; track repository.id) {
+            <repo-card [repository]="repository"></repo-card>
+            }
         </ul>
+
     </section>
 </main>
 <router-outlet />
