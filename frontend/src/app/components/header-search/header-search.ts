@@ -10,10 +10,10 @@ export class HeaderSearch {
   query = signal('');
   submitted = output<string>();
 
-  submit() {
-    if (this.query().trim()) {
-      console.log("oi");
-      this.submitted.emit(this.query());
-    }
+  submit(event: Event) {
+    event.preventDefault();
+
+    this.submitted.emit(this.query());
+
   }
 }
