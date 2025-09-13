@@ -12,8 +12,6 @@ export class HeaderSearch {
 
   submit(event: Event) {
     event.preventDefault();
-
     this.submitted.emit(this.query());
-
   }
 }

@@ -1,7 +1,10 @@
 header {
-    max-width: 50%;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     padding: 0.25rem;
+    justify-self: center;
+    width: 50%;
 
     .input-container {
         box-shadow: 1.1px 2.2px 2.2px hsl(0deg 0% 0% / 0.47);
