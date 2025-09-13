@@ -1,8 +1,10 @@
 <header-search (submitted)="onSearch($event, page)"></header-search>
 <main class="main">
-    @if(githubService.repositories().totalCount && githubService.repositories().pagination !== null) {
-    <paginator (next)="onNext()" (previous)="onPrev()" [page]="page" [totalPages]="totalPages"></paginator>
+    @if(githubService.repositories().totalCount && githubService.repositories().lastPage !== page) {
+    <paginator (next)="onNext()" (previous)="onPrev()" [page]="page" [totalPages]="totalPages"
+        (pageChange)="onPageChange($event)"></paginator>
     }
+
     <section>
         @if(githubService.error().message && hasSearched()) {
         <p class="error-message"><i class="ph-bold ph-warning-circle"></i> {{githubService.error().message}}</p>
@@ -12,7 +14,9 @@
             <repo-card [repository]="repository"></repo-card>
             }
         </ul>
-
     </section>
+    @if(githubService.repositories().totalCount && githubService.repositories().lastPage !== page) {
+    <paginator (next)="onNext()" (previous)="onPrev()" [page]="page" [totalPages]="totalPages"></paginator>
+    }
 </main>
 <router-outlet />

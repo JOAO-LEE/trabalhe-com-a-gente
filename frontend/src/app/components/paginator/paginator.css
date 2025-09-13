@@ -1,9 +1,32 @@
-.action-buttons-container button {
-    font-size: 1rem;
-    font-family: "Poppins", sans-serif;
-    color: var(--primary-color);
+.action-buttons-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: center;
+
+    .action-button {
+        font-size: 1rem;
+        font-family: "Poppins", sans-serif;
+        color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: all 500ms ease-in-out;
+
+        &:hover {
+            color: var(--secondary-color);
+        }
+
+        &:disabled {
+            color: #d6ccc2
+        }
+    }
+
 }
 
-.action-buttons-container button:disabled {
-    color: #d6ccc2
+.page-numbers {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    justify-content: center;
 }

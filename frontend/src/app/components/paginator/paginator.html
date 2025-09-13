@@ -6,7 +6,7 @@
         <button [disabled]="isNextDisabled()" (click)="onNext()" class="action-button">next <i
                 class="ph-bold ph-caret-right"></i></button>
     </div>
-    <div>
+    <div class="page-numbers">
         @for (pageNum of getPageNumbers(); track pageNum) {
         <button [disabled]="pageNum === page" (click)="onPageClick(pageNum)">
             {{ pageNum }}
