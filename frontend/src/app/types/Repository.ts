@@ -13,7 +13,7 @@ export type Repository = {
 }
 
 export type RepositoryResult = {
-    pagination: string;
+    lastPage: number;
     totalCount: number
     incompleteResults: boolean,
     items: Array<Repository>
