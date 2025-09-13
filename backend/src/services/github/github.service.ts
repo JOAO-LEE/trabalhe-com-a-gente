@@ -1,11 +1,19 @@
-import { CustomError } from "../../Error/Error.ts";
-import { camecalize } from "../../utils/camecalize.ts";
-import type { RepositoryResult } from "../../interface/Repository.ts";
+import { CustomError } from "../../Error/Error";
+import { camecalize } from "../../utils/camecalize";
+import type { RepositoryResult } from "../../interface/Repository";
+import { extractLastPageNumber } from "../../utils/extractLastPageNumber";
 
-export const getRepoBySearchParamService = async (searchParam: string): Promise<RepositoryResult | void> => {
-    const githubApiUrl = `https://api.github.com/search/repositories?q=${searchParam}`;
+export const getRepoBySearchParamService = async (searchParam: string, page: string = "1") => {
+    const githubApiUrl = `https://api.github.com/search/repositories?q=${searchParam}&per_page=10&page=${page}`;
 
-    const response = await fetch(githubApiUrl);
+    const response = await fetch(githubApiUrl, {
+        headers: {
+            Accept: 'application/vnd.github+json',
+        }
+    });
+
+    const pagination = response.headers.get("link");
+    const lastPage = extractLastPageNumber(pagination);
     const result = await response.json();
 
     if (`errors` in result) {
@@ -18,6 +26,6 @@ export const getRepoBySearchParamService = async (searchParam: string): Promise<
         throw new CustomError("No results were found matching this term.", 404);
     }
 
-    return repositoriesList;
+    return { lastPage, ...repositoriesList };
 
 }
