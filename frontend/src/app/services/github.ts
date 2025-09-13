@@ -9,7 +9,7 @@ import { RepositoryResult } from '../types/Repository';
 export class GithubService {
   private apiUrl = 'http://localhost:3000/';
   repositories = signal<RepositoryResult>({
-    pagination: '',
+    lastPage: 0,
     totalCount: 0,
     incompleteResults: false,
     items: []
@@ -28,7 +28,7 @@ export class GithubService {
         catchError((err) => {
           this.error.set(err.error);
           this.repositories.set({
-            pagination: '',
+            lastPage: 0,
             totalCount: 0,
             incompleteResults: false,
             items: []
