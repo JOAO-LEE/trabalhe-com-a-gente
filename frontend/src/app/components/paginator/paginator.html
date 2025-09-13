@@ -1,4 +1,16 @@
-<div class="action-buttons-container">
-    <button [disabled]="isPreviousDisabled()" (click)="onPrevious()">previous</button>
-    <button [disabled]="isNextDisabled()" (click)="onNext()">next</button>
+<div>
+    <div class="action-buttons-container">
+        <button [disabled]="isPreviousDisabled()" (click)="onPrevious()" class="action-button"><i
+                class="ph-bold ph-caret-left"></i>
+            previous</button>
+        <button [disabled]="isNextDisabled()" (click)="onNext()" class="action-button">next <i
+                class="ph-bold ph-caret-right"></i></button>
+    </div>
+    <div>
+        @for (pageNum of getPageNumbers(); track pageNum) {
+        <button [disabled]="pageNum === page" (click)="onPageClick(pageNum)">
+            {{ pageNum }}
+        </button>
+        }
+    </div>
 </div>

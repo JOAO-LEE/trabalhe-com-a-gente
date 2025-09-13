@@ -1,4 +1,4 @@
-import { Component, input, Input, output } from '@angular/core';
+import { Component, computed, input, Input, output } from '@angular/core';
 import { GithubService } from '../../services/github';
 
 @Component({
@@ -10,20 +10,22 @@ import { GithubService } from '../../services/github';
 export class Paginator {
   previous = output<void>();
   next = output<void>();
+  pageChange = output<number>();
+
   @Input() page: number;
-  @Input() totalPages: number
-
-  constructor(public githubService: GithubService) {
-  }
-
+  @Input() totalPages: number;
 
   onNext() {
-    console.log(this.page);
     this.next.emit();
   }
 
   onPrevious() {
+    console.log(this.totalPages)
     this.previous.emit();
+  }
+
+  onPageClick(page: number) {
+    this.pageChange.emit(page);
   }
 
   isPreviousDisabled(): boolean {
@@ -31,6 +33,11 @@ export class Paginator {
   }
 
   isNextDisabled(): boolean {
-    return this.totalPages === this.page;
+    return this.totalPages === this.page
   }
+
+  getPageNumbers(): number[] {
+    return Array.from({ length: this.totalPages }, (_, i) => i + 1);
+  }
+
 }
