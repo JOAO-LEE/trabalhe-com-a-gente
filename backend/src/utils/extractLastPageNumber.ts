@@ -1,7 +1,7 @@
 export function extractLastPageNumber(linkHeader: string | null): number {
     if (!linkHeader) return 1;
     const links = linkHeader.split(",");
-    console.log(links)
+
     const lastPageLink = links.find((link) => link.includes('rel="last"'));
     if (!lastPageLink) return 1;
     const linkSplit = lastPageLink.split("page=")
