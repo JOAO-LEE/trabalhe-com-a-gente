@@ -11,7 +11,7 @@
         @if (isEllipsis(pageNum)) {
         <span class="ellipsis">...</span>
         } @else {
-        <button [disabled]="+pageNum === page + 1" class="page-nums" (click)="onPageClick(+pageNum)">
+        <button [disabled]="+pageNum === page" class="page-nums" (click)="onPageClick(+pageNum)">
             {{ pageNum }}
         </button>
         }

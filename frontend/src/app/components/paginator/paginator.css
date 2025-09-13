@@ -13,28 +13,42 @@
         gap: 0.5rem;
         transition: all 500ms ease-in-out;
 
-        &:hover {
+        &:hover:not(:disabled) {
+            cursor: pointer;
             color: var(--secondary-color);
         }
 
         &:disabled {
-            color: #d6ccc2
+            color: #d6ccc2;
         }
     }
-
 }
 
 .page-numbers {
+    font-weight: bold;
     display: flex;
     align-items: center;
     gap: 1.25rem;
     justify-content: center;
 
     .page-nums {
-        color: var(--secondary-color)
+        font-family: "Space Mono", monospace;
+        color: var(--secondary-color);
     }
 
     :disabled {
-        color: var(--primary-color)
+        text-decoration: 1px solid underline;
+        color: var(--primary-color);
+    }
+
+    .page-nums:hover:not(:disabled) {
+        cursor: pointer;
+        color: var(--primary-color);
+    }
+
+    .ellipsis {
+        font-family: "Poppins", sans-serif;
+        user-select: none;
+        color: var(--primary-color);
     }
 }

@@ -57,7 +57,6 @@ export class Paginator {
       visiblePages.push('...');
     }
 
-
     for (let i = startPage; i <= endPage; i++) {
       visiblePages.push(i);
     }

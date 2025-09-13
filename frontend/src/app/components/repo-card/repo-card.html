@@ -1,9 +1,22 @@
 <div class="repo-card">
     <div class="title-container">
         <img [src]="repository.owner.avatarUrl" alt="" class="user-image">
-        <a>{{ repository.owner.login }}/<b>{{ repository.name }}</b></a>
+        <a href="{{repository.htmlUrl}}">{{ repository.owner.login }}/<b>{{ repository.name }}</b></a>
     </div>
     <p id="description">{{ repository.description}}</p>
+    @if(repository.topics.length) {
+    <div class="topic-list-container">
+        <ul class="topic-list">
+            @for(topic of repository.topics.slice(0, 4); track topic) {
+            <li>{{topic}}</li>
+            }
+        </ul>
+
+        @if (repository.topics.length - repository.topics.slice(0, 4).length > 0) {
+        <p class="more-items">+{{repository.topics.length - repository.topics.slice(0, 4).length}}</p>
+        }
+    </div>
+    }
     <div class="detailed-repo-info">
         <div class="info-container">
             <div class="repo-info">

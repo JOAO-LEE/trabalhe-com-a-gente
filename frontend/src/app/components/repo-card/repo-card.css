@@ -8,6 +8,47 @@
     flex-flow: column;
     width: 600px;
 
+    .topic-list-container {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+
+        .topic-list {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        li,
+        .more-items {
+            font-size: 12px;
+            color: #F5F5F5;
+            padding-block: 0.25rem;
+            padding-inline: 0.5rem;
+            border-radius: 32px;
+            user-select: none;
+            transition: all 250ms ease-in-out;
+        }
+
+        li {
+            background-color: var(--secondary-color);
+        }
+
+        li:hover {
+            background-color: var(--primary-color);
+        }
+
+        .more-items {
+            background-color: var(--primary-color);
+        }
+
+        .more-items:hover {
+            background-color: var(--secondary-color);
+
+        }
+    }
+
+
     .title-container {
         display: flex;
         align-items: center;

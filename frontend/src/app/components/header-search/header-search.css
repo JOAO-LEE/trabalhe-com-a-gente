@@ -1,10 +1,11 @@
-header {
+.header {
     display: flex;
     flex-direction: column;
+    justify-self: center;
+    align-items: center;
     gap: 1rem;
     padding: 0.25rem;
-    justify-self: center;
-    width: 50%;
+    width: 400px;
 
     .input-container {
         box-shadow: 1.1px 2.2px 2.2px hsl(0deg 0% 0% / 0.47);
@@ -12,12 +13,13 @@ header {
         padding: 16px;
         display: flex;
         align-items: center;
+        min-width: 600px;
 
         .search-field {
+            width: 100%;
             font-family: "Space Mono";
             font-size: 16px;
             border: 0;
-            width: 100%;
             color: var(--secondary-color);
         }
 
@@ -27,6 +29,7 @@ header {
 
         .search-field::placeholder {
             color: var(--primary-color);
+            opacity: 60%;
         }
 
         .search-field:-webkit-autofill {
@@ -43,7 +46,6 @@ header {
 
     .hint {
         justify-self: center;
-        margin-top: 16px;
         display: flex;
         gap: 0.5rem;
         align-items: center;
