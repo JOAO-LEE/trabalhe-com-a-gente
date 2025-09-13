@@ -29,4 +29,12 @@
     align-items: center;
     gap: 1.25rem;
     justify-content: center;
+
+    .page-nums {
+        color: var(--secondary-color)
+    }
+
+    :disabled {
+        color: var(--primary-color)
+    }
 }
