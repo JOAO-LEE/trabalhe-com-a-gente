@@ -3,18 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
-  "type": "module",
   "scripts": {
     "start": "ts-node src/server.ts",
     "build": "tsc",
     "dev": "nodemon --watch src --ext ts --exec ts-node src/server.ts"
   },
   "dependencies": {
+    "@types/cors": "^2.8.19",
     "camelcase-keys": "^10.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
     "express": "^5.1.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
+    "@types/morgan": "^1.9.10",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
