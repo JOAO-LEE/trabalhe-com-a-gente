@@ -1,12 +1,12 @@
 import { type Request, type Response } from "express";
-import { getRepoBySearchParamService } from "../../services/github/github.service.ts";
-import { CustomError } from "../../Error/Error.ts";
+import { getRepoBySearchParamService } from "../../services/github/github.service";
+import { CustomError } from "../../Error/Error";
 
 export const githubController = async (req: Request, res: Response) => {
-    const { query } = req.query;
+    let { q, page } = req.query;
     try {
-        const repositories = await getRepoBySearchParamService(query!.toString());
-        return res.status(200).json(repositories)
+        const repositoriesResult = await getRepoBySearchParamService(q!.toString(), page!.toString());
+        return res.status(200).json(repositoriesResult);
     } catch (error) {
         if (error instanceof CustomError) {
             return res.status(error.cause).json({ message: error.message });
