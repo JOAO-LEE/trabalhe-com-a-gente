@@ -1,11 +1,12 @@
 .repo-card {
-    margin-top: 16px;
     border: 1px solid var(--secondary-color);
     padding: 16px;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    flex-flow: column;
+    width: 600px;
 
     .title-container {
         display: flex;
@@ -41,18 +42,11 @@
         align-items: center;
         justify-content: space-between;
 
-
-
-
-
         .info-container {
             gap: 1rem;
             display: flex;
             align-items: center;
-
-
         }
-
     }
 
     .detailed-repo-info:first-child {
