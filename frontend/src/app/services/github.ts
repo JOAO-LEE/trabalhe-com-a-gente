@@ -2,12 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, signal } from '@angular/core';
 import { Observable, tap, catchError } from 'rxjs';
 import { RepositoryResult } from '../types/Repository';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GithubService {
-  private apiUrl = 'http://localhost:3000/';
+  private apiUrl = environment.apiUrl;
   repositories = signal<RepositoryResult>({
     lastPage: 0,
     totalCount: 0,
@@ -22,6 +23,7 @@ export class GithubService {
     return this.http.get<RepositoryResult>(`${this.apiUrl}?q=${query}&page=${page}`)
       .pipe(
         tap((response) => {
+          console.log(response);
           this.repositories.set(response);
           this.error.set({ message: "" });
         }),
