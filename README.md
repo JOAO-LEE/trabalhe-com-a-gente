@@ -1,4 +1,4 @@
-# 🛍️ Desafio Técnico **notro**  
+# Desafio Técnico **notro**  
 
 Aplicação fullstack criada com **Angular (v.20)** e **Express.js (v.5) em TypeScript** para buscas de repositórios públicos no GitHub - traz informações referentes ao repositório como descrição, tópicos, linguagem mais utilizada, quantidade de *stars* e *watchers* e última atualização.
 
