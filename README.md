@@ -51,6 +51,7 @@ npm install
 ```bash
 npm run dev
 ```
+Você deve visualizar no terminal:
 ![Demonstração do backend da aplicação sendo executado](images/image-1.png)
 </details>
 <hr>
