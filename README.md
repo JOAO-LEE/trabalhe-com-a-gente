@@ -51,7 +51,7 @@ npm install
 ```bash
 npm run dev
 ```
-![Demonstração do backend da aplicação sendo executado](image-1.png)
+![Demonstração do backend da aplicação sendo executado](images/image-1.png)
 </details>
 <hr>
 <details>
@@ -75,7 +75,7 @@ npm install
 ng serve
 ```
 Você deve visualizar no terminal:
-![Demonstração do frontend da aplicação sendo executado](image.png)
+![Demonstração do frontend da aplicação sendo executado](images/image.png)
 </details>
 <hr>
 
