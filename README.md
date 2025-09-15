@@ -1,258 +1,116 @@
-👨‍💻 Vaga para apaixonados por criação de software
-===========================================
+# 🛍️ Desafio Técnico **notro**  
 
-A empresa
-----------
+Aplicação fullstack criada com **Angular (v.20)** e **Express.js (v.5) em TypeScript** para buscas de repositórios públicos no GitHub - traz informações referentes ao repositório como descrição, tópicos, linguagem mais utilizada, quantidade de *stars* e *watchers* e última atualização.
 
-Somos um [SaaS (Software as a service)](https://pt.wikipedia.org/wiki/Software_como_servi%C3%A7o) para empresas que atuam no ramo de assistências 24h.
+<div align="center">
+  <details>
+    <summary>Imagens da aplicação</summary>
+      <div display="flex">
+        <img src="images/image-2.png" width="375" alt="Busca por repositórios ainda não realizada"  title="Busca por repositórios ainda não realizada"/>
+        <img src="images/image-3.png" width="375" alt="Resultados de repositórios de acordo com a busca"  title="Resultados de repositórios de acordo com a busca"/>
+        <img src="images/image-4.png" width="375" alt="Erro informando que repositórios com o termo da busca não foram encontrados"  title="Erro informando que repositórios com o termo da busca não foram encontrados"/>
+        <img src="images/image-5.png" width="375" alt="Erro informando que o termo de busca é necessário"  title="Erro informando que o termo de busca é necessário"/>
+      </div>
+  </details>
+</div>
 
-Entregamos **controle**, **organização** e **melhor relacionamento com o cliente** para empresas de Viagens, Auto, Saúde, Funeral e também Residencial.
+## ⚠️ Dependências do projeto
+Versão do **Node.js**: ```LTS (v22.x)```.<br>
+Versão do **Docker** utilizada pra *"conteinerizar"* a aplicação: ```28.4.0```.<br>
+Versão do **docker-compose** para definição e a execução de ambos contêineres (frontend e backend) simultaneamente: ```2.39.2```.
+ 
+## 📦 Instalação
 
-<p>
-  <img src="assets/notro.jpg" width="955"/>
-</p>
+### 1. Clone o repositório
 
-Origem
-----------
-
-Um ponto importante é que a Notro foi fundada por desenvolvedores, só por esse motivo você pode **TER CERTEZA** que aqui as coisas são muito diferentes das empresas tradicionais.
-
-Aqui utilizamos [princípios ágeis](http://www.manifestoagil.com.br/) **DE VERDADE** para criação de software. Veja bem, não estou falando de post its ou reuniões em pé.. E sim de: Pair programming, Continuous Integration, Continuous Deployment e claro, testes automatizados.
-
-Condições
-----------
-- Período: Integral
-- Onde: Qualquer lugar :)
-----------
-
-A empresa não possui hierarquias e você é convidado e desafiado a colaborar com todas as frentes de trabalho. Ou seja, aqui todas sugestões são bem vindas!
-Oportunidade
-
-Estamos em busca de desenvolvedores **Frontend** FODAS e APAIXONADOS para fazer parte do nosso time de produto.
-
-Na Notro, o seu dia-a-dia será repleto de:
-
-```javascript
-[
-  'GitHub & Git <3',
-  'Muito, muito e muito JavaScript',
-  'Object-oriented programming, SOLID Principles & Design Patterns',
-  'Práticas e princípios ágeis (Pair programming, Continuous Integration, Continuous Deployment)',
-  'Testes de software (unitários, integração, e2e..)',
-  'Desafios de escalabilidade',
-  'Desafios de alta disponibilidade',
-  'Micro services e aplicações distribuídas',
-  'Amazon Web Services',
-  'PAAS & Cloud Services',
-  'Serverless apps',
-  'Angular',
-  'REST APIs',
-  'GraphQL APIs',
-  'Material Design',
-  'Open source software'
-]
+```bash
+git clone https://github.com/JOAO-LEE/trabalhe-com-a-gente.git
+// OU
+git clone git@github.com:JOAO-LEE/trabalhe-com-a-gente.git
+cd trabalhe-com-a-gente
 ```
 
-Nossa stack é praticamente toda em JavaScript: Node.js, SPA's e Hybrid Mobile Apps.
+### 2. Rodando a aplicação
+<details>
+<summary><b>Backend</b></summary>
 
-Acreditamos que bons desenvolvedores usam a melhor ferramenta para cada problema, então, para resolver alguns problemas bem específicos usamos a melhor alternativa disponível, por isso, temos uma pitada de C#, Java e PHP também.
+### 1. Navegue até a pasta
 
-Nossos servidores estão na AWS e usamos a núvem como plataforma. Temos apps rodando no Elastic BeanStalk, S3 e Serverless na AWS Lambda :)
+```bash
+cd frontend/
+```
 
-Antes do conhecimento técnico, temos preferência pelo perfil pessoal. Ou seja, se você for esforçado, interessado e curioso.. é isso que importa pra a gente! :)
+### 2. Instale as dependências
 
-Requisitos principais
-----------
- - P R O A T I V I D A D E
- - Sentimento de D O N O
- - Boa comunicação e trabalho em equipe :)
- - Proficiência em JavaScript e Typescript
- - Experiência com CSS e HTML Semântico
- - Experiência sólida com Angular, Ionic, GraphQL
- - Familiaridade com princípios de UX
- - Familiaridade com APIs REST, GraphQL e WebSockets
- - Ter prática em testar software!
+```bash
+npm install
+```
 
-Os desafios de programação
-----------
+### 3. Inicie a aplicação
 
-Se você **realmente ama** trabalhar com desenvolvimento de software e quer desafios pra sua carreira.. escolha um (ou todos) dos desafios abaixo, faça um fork desse repositório e [let the hacking begin](https://www.youtube.com/watch?v=Dvrdxn0kHL8)
+```bash
+npm run dev
+```
+![Demonstração do backend da aplicação sendo executado](image-1.png)
+</details>
+<hr>
+<details>
+<summary><b>Frontend</b></summary>
 
-<!-- &lt;challenge&gt; Frontend Developer Iniciante &lt;/challenge&gt;
-----------
+### 1. Navegue até a pasta
 
-:exclamation: | Faça esse teste apenas se você é realmente iniciante, beleza? :)
----: | :---
+```bash
+cd frontend/
+```
 
-<br/>
+### 2. Instale as dependências
 
-Esse desafio consiste em recortar o psd anexo nesse repositório ([Clique aqui para fazer o download](https://github.com/FieldControl/valinor/raw/master/front-end-challenge-1.zip)) para uma landing page.
+```bash
+npm install
+```
 
-Você pode usar criar os estilos na mão ou usar um framework já pronto como o Twitter Bootstrap.
+### 3. Inicie a aplicação
 
-A idéia é que a landing seja responsiva e deve conter todas as seções do PSD:
+```bash
+ng serve
+```
+Você deve visualizar no terminal:
+![Demonstração do frontend da aplicação sendo executado](image.png)
+</details>
+<hr>
 
-- Header
-- Section para funcionalidades
-- Section de imagens
-- Section do time
-- Slider com depoimentos
-- Section para call to action
-- Footer
+### 3. Executando a aplicação com o **Docker** 🐋
 
-A dica aqui é que seu HTML e CSS seja bem escrito e com uma boa semântica :) -->
+Se você estiver na pasta **frontend** ou na pasta **backend**, volte para a pasta raiz da aplicação:
 
-# 🚀 Desafio Técnico – Fullstack Developer
+```bash
+cd ../
+```
 
-----------
+Na pasta raiz da aplicação, execute o comando:
+```bash
+docker-compose up -d
+```
+Em um navegador, acesse: <br>
+**http://localhost:4200**
+<hr>
 
-O objetivo deste desafio é avaliar suas habilidades de **frontend e backend** em um cenário prático.  
-Você deverá construir uma aplicação **SPA (Single Page Application)** utilizando **Angular 18+** e também desenvolver um **backend em Node.js** (pode ser com **Express, Nest.js, GraphQL ou até Node.js puro**).
+### Respostas
 
-A aplicação deverá permitir que o usuário **pesquise repositórios no GitHub** (ou outra API pública de sua escolha) e exiba informações relevantes de cada repositório de forma paginada.
-
----
-
-## 🎯 Objetivos
-
-### Frontend (Angular 18+)
-- Permitir pesquisar repositórios por nome.
-- Listar informações relevantes: **nome, URL, descrição, contagem de watchers, estrelas, issues**, etc.
-- Implementar **paginação** via API.
-- Seguir boas práticas de **UX/UI**, com layout simples e organizado.
-
-### Backend (Node.js)
-- Servir como camada intermediária entre o frontend e a API externa (ex: GitHub).
-- Disponibilizar **endpoints REST ou GraphQL** para o frontend consumir.
-- Implementar **tratamento de erros** e boas práticas de arquitetura.
-- Utilizar **estrutura clara de pastas (MVC ou modular)**.
-- **Opcional:** implementar **caching** para melhorar a performance.
-
----
-
-## 🧪 Diferenciais
-
-- **Testes unitários e integrados** no frontend e backend.  
-- Uso de **RxJS** no Angular para lidar com chamadas assíncronas.  
-- Uso de **Angular Material** ou outra biblioteca de UI.  
-- Configuração de **Docker** para subir o ambiente completo.  
-- Deploy em algum serviço (Heroku, Vercel, AWS, etc).  
-
----
-
-## 🔗 URLs úteis
-
-| Descrição | URL |
-|-----------|-----|
-| API para pesquisar repositórios no GitHub | https://api.github.com/search/repositories?q=bootstrap |
-| API para listar issues de um repositório | https://api.github.com/search/issues?q=repo:username/reponame |
-| Documentação da API GitHub | https://developer.github.com/v3/search |
-
-Se achar a API do GitHub muito "boring", pode escolher outra API pública divertida, como:
-- [Star Wars (SWAPI)](https://swapi.dev)
-- [Marvel](https://developer.marvel.com)
-- [The Cat API](https://thecatapi.com)
-
----
-
-## ✅ Requisitos mínimos
-
-- Frontend em **Angular 18+** (obrigatório).
-- Backend em **Node.js** (pode ser Express, Nest.js, GraphQL ou puro).
-- Listar itens de uma API pública.
-- Implementar **paginação** via API.
-- Seguir **boas práticas de código, organização e clareza**.
-
----
-
-## 📦 Entrega
-
-- O código deve estar em um repositório público no GitHub/GitLab.  
-- O README deve conter:
-  - Instruções para rodar o frontend e backend.  
-  - Dependências necessárias.  
-  - Como rodar os testes.  
-
----
-
-👉 Esse desafio é uma oportunidade de mostrar suas **skills técnicas** e também sua **organização de projeto**.  
-
-Boa sorte e divirta-se! 🚀
-
-<!-- { "challenge": "Backend Developer 1" } -->
-<!-- ---------- -->
-
-<!-- Desenvolver uma API JSON RESTful expondo operações de um CRUD. -->
-
-<!-- Pense em algum recurso (use sua criatividade), pode ser gatos, personagens dos senhores do anéis, personagens da marvel, pokemon, enfim, o que você quiser.. -->
-
-<!-- Utilize todos os métodos (GET, POST, PUT, PATCH, DELETE) -->
-
-<!-- Você terá que expor os seguintes endpoints para o recurso escolhido: -->
-
-<!-- | Método | URL  | Comportamento esperado                               |  -->
-<!-- |--------| ---  |                                                  --- | -->
-<!-- | GET    | /resources     | Recupera a lista dos recursos, essa ação deve ser paginada e deve possibilitar busca pelas propriedades do recurso |  -->
-<!-- | GET    | /resources/:id | Recupera um recursos em especifico pelo id |  -->
-<!-- | POST   | /resources     | Insere um novo recurso                     |  -->
-<!-- | PUT    | /resources/:id | Altera um recurso existente                |  -->
-<!-- | PATCH  | /resources/:id | Altera parcialmente um recurso existente   |  -->
-<!-- | DELETE | /resources/:id | Exclui um recurso existente                | -->
-
-<!-- - **Qual Web Framework?** pode ser Express.js, Hapi, Restify, Koa, fastify, o que você preferir :P -->
-<!-- - **Qual Banco de dados?** Mesmo pensamento, pode ser MongoDb, DynamoDb, Postgres, MySql.. enfim, não importa :) -->
-
- <!-- **Atenção:** -->
- <!-- Você deve se preocupar com sanitização, validação e semântica.   -->
- 
-<!-- { "challenge": "Backend Developer" }
-----------
-
-Desenvolver uma API GraphQL em JavaScript expondo operações de um CRUD.
-
-Pense em algum tema (use sua criatividade), pode ser gatos, personagens dos senhores do anéis, personagens da marvel, pokemon, enfim, o que você quiser..
-
-Você terá que expor as seguintes queries e mutations para o tema escolhido:
-
-| Tipo      | O quê?  | Comportamento esperado                               | 
-|--------   | ---     |                                                  --- |
-| Query     | Recuperar lista dos items     | Recupera a lista dos items, essa ação deve ser paginada e deve possibilitar busca por propriedades | 
-| Query     | Recuperar um item | Recupera um item pelo id | 
-| Mutation  | Adicionar um item | Insere um novo item                     | 
-| Mutation  | Atualizar um item | Altera um item existente                | 
-| Mutation  | Excluir um item   | Remove um item existente                | 
-
-- **Qual Web Framework?** pode ser graphql-js, graphql-yoga, apollographql ou o que você preferir :P
-
-- **Qual Banco de dados?** Mesmo pensamento, pode ser MongoDb, DynamoDb, Postgres, MySql.. enfim, não importa :)
-
- **Atenção:**
- Você deve se preocupar com validação e semântica.  -->
-
-Dúvidas?
-----------
-Abra um issue ou mande um e-mail para **igor@notro.io** ou **luiz@fieldcontrol.com.br**, fechou? :)
-
-Avaliação
-----------
-
-Entre os critérios de avaliação estão:
-
-- Código limpo e organização
-- Testes de software (unitários e integrados)
-- Semântica
-- Documentação do projeto (README)
-- Segurança
-
-Entrega
-----------
-
-Você deve enviar a resolução do desafio via pull request nesse mesmo repositório :)
-
-Gostariamos de entender como você pensa e as decisões que você tomou durante o desenvolvimento. Então, quando for enviar seu pull request, por favor responda:
-
-- Qual ferramentas e bibliotecas (libraries, framework, tools etc) você usou
-- Porque você optou pela tecnologia X e não a Y
-- Quais princípios da engenharia de software que você usou?
-- Desafios e problemas que você enfrentou e como você resolveu
-- O que você entende que pode ser melhorado e como fazer isso
+- **Qual ferramentas e bibliotecas (libraries, framework, tools etc) você usou?**
+   * No **frontend**
+       - **date-fns** - para formatação de data (Última atualização do repositório)
+    * No **backend**
+       - **camelcase-keys** - A API do Github retorna as informações em *"snake case"*, e para normalizar o nome das variáveis na minha aplicação, utilizei-a para converte-lás para o padrão *"camel case"*.
+       - **cors** - para autorizar a origem das requisições da aplicação.
+- **Porque você optou pela tecnologia X e não a Y?** 
+   * No backend, optei utilizar o **Express.js** por já ter familiaridade com a ferramenta, além de sua fácil configuração; é pouco verbosa e rápida de subir. No frontend eu poderia ter utilizado outros pacotes de formatação de dados, mas escolhi o **date-fns** devido à sua baixa complexidade e robustez; por ser um pacote muito utilizado, existe documentação à respeito da ferramenta e muitas soluções já prontas disponíveis. 
+- **Quais princípios da engenharia de software que você usou?**
+   - Segui princípios inspirados na arquitetura **MSC (Model Service Controller)**, separando **controllers** e **services** ainda que não houvesse a necessidade de criação da camada de **models** nesse projeto. Essa escolha teve o intuito de separar responsabilidades e manter o código organizado e escalável.
+   - Criei funções utilitárias isoladas na pasta `utils`, com o intuito de separar responsabilidades, ter fácil leitura, manutenção e reuso.
+- **Desafios e problemas que você enfrentou e como você resolveu?**  
+    * Pensar na páginação dos dados foi desafiador. A documentação do Github informa que em uma requisiçào bem sucedida à API, é retornado no *response header* uma chave link com informações de páginação, como os links da próxima página e da última página. Com essas informações, pensei em devolver o link da próxima página para o backend, verficando a página atual. No entanto, pensei que isso não seria tão prático, e isso também não havia resolvido o meu problema de exibição dos números das páginas no frontend. Tendo em vista que a API do Github retornava o número da última página, pensei em renderizar a quantidade de páginas a partir deste número. A criação do código para a exibição de um elipse em uma alta quantidade de páginas foi feita com a ajuda de inteligência artificial.
+    * <details><summary>Desenvolvendo no Windows</summary>Enquanto pensava em como fazer a páginação, fazia requisições à API do Github passando os <em>"query params"</em>  que a rota disponibiliza como  <em>"page"</em> e <em>"per_page"</em>, e mesmo passando <em>1</em> em <em>"per_page"</em>, a requisição me devolvia um JSON com quase 3400 linhas. Li e reli a documentação do Github, <a href="https://api.github.com/search/repositories?q=node&per_page=1&page=1">testei diretamente no browser e funcionava normalmente</a> e não entendia o que poderia estar de errado no código. Derrubei e subi a aplicação, testava os <em>"query params"</em>, e ainda não funcionava. Então tive a ideia de comentar trechos do código como o <code>app.ts</code>, e a API continuava funcionando normalmente, retornando os dados do Github. Reiniciei o computador e a aplicação funcionou como deveria, respeitando os <em>"query params"</em>. Pelo que pesquisei, o problema provavelmente era o Windows não ter matado processos antigos do meu computador.
+   </details>
+- **O que você entende que pode ser melhorado e como fazer isso?**
+     - Tendo em vista que a aplicação consome uma API externa, como o GitHub, que já adota rate limit para atender a muitos usuários simultaneamente, entendo que também seria necessário aplicar um mecanismo de limitação de requisições no meu projeto. Sem isso, um único usuário pode gerar sobrecarga ao realizar várias chamadas consecutivas. Uma melhoria seria implementar um middleware de rate limiting, que controlasse o número de requisições permitidas em um intervalo de tempo e retornasse uma mensagem de erro apropriada quando o limite fosse atingido. Como solução paliativa, seria possível bloquear o formulário logo após o envio da requisição e reativá-lo apenas quando a resposta fosse recebida.
